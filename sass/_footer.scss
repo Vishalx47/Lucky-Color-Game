@@ -1,0 +1,14 @@
+.footer {
+  // background-color: red;
+
+  grid-column: 1 / -1;
+  grid-row: 5 / -1;
+  align-self: center;
+  justify-self: center;
+}
+.copyright {
+  text-align: center;
+  display: block;
+  font-size: 1.2rem;
+  color: #353d43bf;
+}

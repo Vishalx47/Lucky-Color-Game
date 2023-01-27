@@ -1,0 +1,84 @@
+.control {
+  padding: 2rem 4rem;
+  border: 1px solid $color-gray;
+  border-radius: 5px;
+  grid-column: 1 / -1;
+  grid-row: 2 / span 1;
+}
+
+.color {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 1rem;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+
+  &__button {
+    font-size: 2rem;
+    font-family: inherit;
+    width: 10rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: $color-gray-light;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: translateY(-0.5rem);
+    }
+  }
+
+  &__red:hover {
+    box-shadow: 0 0 1.5rem rgba($color-red, 0.5);
+  }
+
+  &__voilet:hover {
+    box-shadow: 0 0 1.5rem rgba($color-voilet, 0.5);
+  }
+
+  &__green:hover {
+    box-shadow: 0 0 1.5rem rgba($color-green, 0.5);
+  }
+
+  &__red {
+    background-color: $color-red;
+  }
+
+  &__voilet {
+    background-color: $color-voilet;
+  }
+
+  &__green {
+    background-color: $color-green;
+  }
+}
+
+.number {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  gap: 1rem;
+  justify-items: center;
+
+  &__button {
+    font-family: inherit;
+    font-size: 2rem;
+    font-weight: $color-gray-light;
+    height: 4rem;
+    width: 8rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: $color-secondary;
+    color: $color-gray-light;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: translateY(-0.5rem);
+      box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.1);
+    }
+  }
+}

@@ -1,0 +1,196 @@
+.pop-up-bet {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(2px);
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+.popup-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.bet__container {
+  position: relative;
+  background-color: $color-gray-light;
+  font-size: 1.6rem;
+  max-width: 60rem;
+  height: 45rem;
+  border-radius: 5px;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+  // animation: shake 0.5s linear;
+
+  @media only screen and (max-width: $bp-medium) {
+    max-width: 40rem;
+    height: auto;
+  }
+}
+
+.bet__heading {
+  background-color: $color-primary;
+  color: $color-gray-light;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  text-transform: capitalize;
+
+  &--red {
+    background-color: $color-red;
+  }
+
+  &--voilet {
+    background-color: $color-voilet;
+  }
+
+  &--green {
+    background-color: $color-green;
+  }
+}
+
+.bet__amount {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
+  gap: 2rem;
+  margin: 4rem 6rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  }
+
+  &-button {
+    background-color: $color-primary;
+    color: $color-gray-light;
+    font-family: inherit;
+    font-size: 1.8rem;
+    border: none;
+    border-radius: 4px;
+    justify-self: center;
+    padding: 0.5rem 0;
+    text-align: center;
+    width: 80%;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: translateY(-0.5rem);
+    }
+  }
+}
+
+.bet__controls {
+  margin-top: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2rem;
+  background: #f2f4f6;
+  height: 4rem;
+
+  &-button {
+    font-family: inherit;
+    color: inherit;
+    font-size: 2.4rem;
+    background-color: $color-gray;
+    border-radius: 2px;
+    border: none;
+    width: 5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+  }
+
+  &-input {
+    font-family: inherit;
+    color: inherit;
+    font-size: 2.2rem;
+    text-align: center;
+    border: none;
+    background: none;
+    border-bottom: 2px solid $color-gray;
+    width: 40%;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.bet-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 8rem;
+}
+
+.bet__confirm,
+.bet__cancel {
+  width: 12rem;
+  padding: 0.8rem;
+  border-radius: 4px;
+  border: none;
+  font-size: 1.8rem;
+  text-align: center;
+  font-family: inherit;
+  color: $color-gray-dark;
+  cursor: pointer;
+  box-shadow: 0 0.8rem 1rem rgba(0, 0, 0, 0.05);
+  transition: all 0.2s;
+}
+
+.bet__confirm {
+  background-color: $color-primary;
+  color: $color-gray-light;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: $color-primary-dark;
+  }
+}
+
+.icon-sub,
+.icon-add {
+  font-size: 2.4rem;
+  line-height: 0;
+}
+
+.not-enough-money {
+  text-align: center;
+  margin-top: 3.5rem;
+  font-size: 1.6rem;
+  color: #ff6f6f;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+@keyframes shake {
+  0% {
+    left: -0.5rem;
+  }
+  30% {
+    left: 0.5rem;
+  }
+  50% {
+    left: -0.5rem;
+  }
+  70% {
+    left: 0.5rem;
+  }
+  100% {
+    left: -0.5rem;
+  }
+}
+
+.animation-active {
+  animation: shake reverse 0.5s linear;
+}

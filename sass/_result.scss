@@ -1,0 +1,128 @@
+.result {
+  grid-column: 1 / -1;
+  grid-row: 4 / span 1;
+  border-radius: 5px;
+  border: 1px solid $color-gray;
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 5rem 1fr;
+  align-items: center;
+  justify-items: center;
+
+  &__heading {
+    color: #262431;
+    font-weight: 400;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+
+  &__container {
+    grid-column: 1 / -1;
+    grid-row: 2 / -1;
+
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid $color-gray;
+    overflow: scroll;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+  }
+
+  &__details {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+    font-size: 1.8rem;
+    height: 4.5rem;
+    border-bottom: 1px solid $color-gray;
+    transition: all 0.2s;
+
+    &:nth-child(odd) {
+      background-color: #eff0f1d9;
+    }
+
+    &:hover,
+    &:nth-child(odd):hover {
+      background-color: $color-gray;
+    }
+
+    &-period,
+    &-price,
+    &-number {
+      font-weight: 400;
+      color: #353d43;
+      font-size: 1.6rem;
+    }
+
+    &-period::before {
+      content: "#";
+      color: currentColor;
+      margin-right: 0.2rem;
+    }
+
+    &-price--loss {
+      color: $color-red;
+    }
+
+    &-price--win {
+      color: $color-green;
+    }
+
+    &-result--green,
+    &-result--voilet,
+    &-result--red {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+    }
+
+    &-result--red {
+      background-color: $color-red;
+    }
+
+    &-result--voilet {
+      background-color: $color-voilet;
+    }
+
+    &-result--green {
+      background-color: $color-green;
+    }
+  }
+}
+
+.loader {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: 2px solid $color-gray;
+  border-top: 2px solid $color-primary;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: loader 1s infinite linear;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader-active {
+  opacity: 1;
+  pointer-events: all;
+  overflow: visible;
+  visibility: visible;
+}

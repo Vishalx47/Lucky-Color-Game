@@ -1,0 +1,63 @@
+//colors Selection
+
+//primary-colors
+$color-primary: #3498db;
+$color-primary-light: #5dade2;
+$color-primary-dark: #2a7aaf;
+
+//secondary color
+$color-secondary: #3498db;
+
+//grays
+$color-gray: #d2dae2;
+$color-gray-light: #f2f4f6;
+$color-gray-dark: #1e272e;
+
+// accent colors
+$color-green: #05c46b;
+$color-red: #ff3f34;
+$color-voilet: #3c40c6;
+
+//responsive units
+$bp-largest: 68.75em;
+$bp-large: 56.25em;
+$bp-medium: 37.5em;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $color-gray-dark;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+    90deg,
+    $color-primary-light,
+    $color-primary
+  );
+}
+
+img {
+  width: 100%;
+}
+
+.icon {
+  list-style: 1;
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lucky Color</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet" />
+    <!-- Icon -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </head>
+  <body>
+    <div class="pop-up-bet">
+      <div class="bet__container">
+        <h2 class="bet__heading">Join Red</h2>
+        <div class="bet__amount">
+          <button class="bet__amount-button" data-amount="10">10</button>
+          <button class="bet__amount-button" data-amount="20">20</button>
+          <button class="bet__amount-button" data-amount="50">50</button>
+          <button class="bet__amount-button" data-amount="100">100</button>
+          <button class="bet__amount-button" data-amount="250">250</button>
+        </div>
+
+        <div class="bet__controls">
+          <button
+            class="bet__controls-button bet__controls-decrease"
+            data-curramount="-10">
+            <ion-icon class="icon icon-sub" name="remove-outline"></ion-icon>
+          </button>
+          <input type="text" class="bet__controls-input" value="10" />
+          <button
+            class="bet__controls-button bet__controls-increase"
+            data-curramount="+10">
+            <ion-icon class="icon icon-add" name="add-outline"></ion-icon>
+          </button>
+        </div>
+        <div class="bet-button">
+          <button class="bet__confirm">Confirm</button>
+          <button class="bet__cancel">Cancel</button>
+        </div>
+        <p class="not-enough-money"></p>
+      </div>
+    </div>
+    <main class="game">
+      <header class="header">
+        <div class="logo">
+          <ion-icon
+            class="icon icon-colors"
+            name="color-filter-outline"></ion-icon>
+          <h1 class="logo">Lucky <span>Color</span></h1>
+        </div>
+        <div class="payment">
+          <ion-icon class="icon icon-wallet" name="wallet-outline"></ion-icon>
+          <p class="payment__total">
+            ₹ <span class="payment__total-amount">0</span>
+          </p>
+          <!-- Rest Game Button -->
+          <button class="reset__game">
+            <ion-icon name="refresh-outline"></ion-icon>
+          </button>
+        </div>
+      </header>
+
+      <div class="control">
+        <div class="color">
+          <button class="color__button color__red" data-color="red">Red</button>
+          <button class="color__button color__voilet" data-color="voilet">
+            Voilet
+          </button>
+          <button class="color__button color__green" data-color="green">
+            Green
+          </button>
+        </div>
+
+        <div class="number">
+          <button class="number__button" data-number="1">1</button>
+          <button class="number__button" data-number="2">2</button>
+          <button class="number__button" data-number="3">3</button>
+          <button class="number__button" data-number="4">4</button>
+          <button class="number__button" data-number="5">5</button>
+          <button class="number__button" data-number="6">6</button>
+          <button class="number__button" data-number="7">7</button>
+          <button class="number__button" data-number="8">8</button>
+        </div>
+      </div>
+      <div class="detail">
+        <div class="detail__period">
+          <!-- <ion-icon class="icon icon-trophy" name="trophy-outline"></ion-icon> -->
+          <h3 class="period"></h3>
+        </div>
+      </div>
+      <div class="result">
+        <!-- loader -->
+        <div class="loader"></div>
+        <!-- results -->
+        <h2 class="result__heading">Periods</h2>
+        <h2 class="result__heading">Price</h2>
+        <h2 class="result__heading">Numbers</h2>
+        <h2 class="result__heading">Result</h2>
+        <div class="result__container"></div>
+      </div>
+      <footer class="footer">
+        <p class="copyright">
+          &copy; Copyright Design & Develop By
+          <a href="https://github.com/Vishalx47" target="_blank">Vishal</a>
+        </p>
+      </footer>
+    </main>
+  </body>
+  <script defer src="js/main.js"></script>
+</html>
