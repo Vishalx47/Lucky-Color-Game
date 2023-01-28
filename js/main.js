@@ -305,7 +305,6 @@ confirmButton.addEventListener("click", function (e) {
 
   //set money and current id
   const latestBet = betHistory[betHistory.length - 1];
-  console.log(latestBet);
 
   //user data ui
   myMoney.textContent = latestBet.userAmount;
