@@ -42,21 +42,24 @@
 }
 
 .reset__game {
-  border: none;
   background: none;
-  border: 2px solid #1c1a29;
-  border-radius: 50%;
+  border: none;
   font-family: inherit;
   font-size: 2rem;
   cursor: pointer;
   line-height: 1;
-  height: 30px;
-  width: 30px;
   color: inherit;
   transition: all 0.3s ease;
   margin-left: 1rem;
+  margin-top: 5px;
+  animation-fill-mode: none;
 
   &:hover {
-    transform: rotate(180deg);
+    transform: rotate(45deg) scale(1.2);
+  }
+
+  svg {
+    width: 2rem;
+    height: 2rem;
   }
 }

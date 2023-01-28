@@ -27,7 +27,7 @@ const addMoney = 500;
 myMoney.textContent = addMoney;
 
 //show result in this time
-const showResultTime = 2000;
+const showResultTime = 1000;
 
 //user bet data
 const userBet = {
