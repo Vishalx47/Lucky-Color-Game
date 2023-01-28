@@ -207,13 +207,10 @@ img {
   margin-top: 5px;
   -webkit-animation-fill-mode: none;
           animation-fill-mode: none;
+  transform: rotate(0deg) scale(0.7);
 }
 .reset__game:hover {
-  transform: rotate(45deg) scale(1.2);
-}
-.reset__game svg {
-  width: 2rem;
-  height: 2rem;
+  transform: rotate(45deg) scale(1);
 }
 
 .game {
